@@ -5,17 +5,15 @@ Our best configuration — *ViT-B/32 + Adapters + Composite Loss* — significan
 
 ---
 
-## 🚀 Key Features
-- 🔥 **CLIP ViT-B/32 backbone** with partial fine-tuning  
-- 🧩 **MLP Adapters** inserted at layers 2, 5, 8, 11  
-- ⚖️ **Composite Loss**: combination of SILog, Gradient, SSIM, and L1  
-- 🧪 Support for **Mixture-of-Adapters (MoA)** with entropy regularization  
-- 📝 Easy training on **NYU Depth V2** dataset  
-- 📊 TensorBoard logging for loss curves and gating probabilities  
+## Key Features
+- **CLIP ViT-B/32 backbone** with partial fine-tuning  
+- **MLP Adapters** inserted at layers 2, 5, 8, 11  
+- **Composite Loss**: combination of SILog, Gradient, SSIM, and L1  
+- Easy training on **NYU Depth V2** dataset  
 
 ---
 
-## 📊 Results
+## Results
 
 ### Performance Comparison
 
@@ -27,11 +25,11 @@ Our best configuration — *ViT-B/32 + Adapters + Composite Loss* — significan
 | ViT-B/32 Backbone 🔥 + Adapters + Loss   | 0.417 | 0.701 | 0.890 | 0.377    | 0.147   | 1.096  |
 | **ViT-B/32 + Adapters + Composite Loss**| **0.503** | **0.791** | **0.925** | **0.310** | **0.121** | **0.843** |
 
-✅ **Our best model outperforms all baselines.**
+**Our best model outperforms all baselines.**
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ```bash
 git clone https://github.com/ReyhanehAhani/AdaDepthCLIP.git
@@ -46,7 +44,7 @@ Dependencies include:
 
 ---
 
-## 🏋️ Training
+## Training
 
 ### Train baseline (ViT-B/32 + Adapters + Composite Loss)
 ```bash
@@ -60,7 +58,7 @@ bash run_train_vit_moa_v2.sh
 
 ---
 
-## 🔍 Evaluation
+## Evaluation
 After training, evaluate the best model:
 ```bash
 python eval.py --model_path ./checkpoints/monoclip_vit_b32/best_model.pth
@@ -70,22 +68,7 @@ Metrics include **AbsRel, Log10, RMSE, δ1, δ2, δ3**.
 
 ---
 
-## 📂 Project Structure
-```
-AdaDepthCLIP/
-│
-├── monoclip_vit_b32.py          # ViT-B/32 + MLP adapters
-├── monoclip_vit_moa_v2.py       # Mixture-of-Adapters version
-├── train_vit_b32_learnable_loss.py
-├── train_vit_moa_v2.py
-├── run_train_vit_moa_v2.sh
-├── datasets/nyudepthv2_*.txt
-└── checkpoints/
-```
-
----
-
-## ✨ Citation
+## Citation
 If you use this repo, please cite it as:
 ```bibtex
 @misc{adadepth2025,
@@ -98,5 +81,5 @@ If you use this repo, please cite it as:
 
 ---
 
-## 📝 License
+## License
 This project is released under the MIT License.
